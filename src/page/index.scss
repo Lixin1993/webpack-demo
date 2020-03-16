@@ -1,0 +1,11 @@
+html, body {
+  background-color: blue;
+}
+
+.div {
+  display: flex;
+  flex: 1;
+  &-flex {
+    flex: 0;
+  }
+}
