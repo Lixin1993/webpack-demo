@@ -1,19 +1,27 @@
 import React, { useState } from 'react'
-import './index.scss'
+import 'assets/style/index'
 
 interface IProps {
-  initCount: number,
+  initCount: number;
 }
 
 const Count = (props: IProps) => {
-  const [count, setCount] = useState(0)
-  const { initCount = 0 } = props
+  const { initCount } = props
+  const [count, setCount] = useState(initCount)
   return (
-    <div>
-      <p>{props.initCount}</p>
+    <div className="count">
+      <img src={require('../assets/image/timg.jpeg')} alt="图片" />
       <p>{count}</p>
-      <input type="button" value="count++" onClick={() => setCount(count+1)} />
-      <input type="button" value="count--" onClick={() => setCount(count-1)} />
+      <input
+        type="button"
+        value="count++"
+        onClick={() => setCount(count + 1)}
+      />
+      <input
+        type="button"
+        value="count--"
+        onClick={() => setCount(count - 1)}
+      />
     </div>
   )
 }
