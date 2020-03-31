@@ -10,7 +10,10 @@
     "dev": "webpack-dev-server --config webpack.dev.js"
   },
   "keywords": [
-    "webpack"
+    "webpack",
+    "typescript",
+    "tslint",
+    "hook"
   ],
   "author": "lixin",
   "license": "ISC",
