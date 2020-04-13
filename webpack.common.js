@@ -23,6 +23,9 @@ module.exports = {
     modules: [path.resolve(__dirname, 'node_modules')],
     alias: {
       assets: path.resolve(__dirname, 'src/assets'),
+      type: path.resolve(__dirname, 'src/type'),
+      store: path.resolve(__dirname, 'src/store'),
+      reducer: path.resolve(__dirname, 'src/reducer'),
     },
     extensions: ['.tsx', '.ts', '.js', '.scss', '.json'],
   },

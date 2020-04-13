@@ -24,6 +24,10 @@
     "noUnusedParameters": true,
     "sourceMap": true,
     "importHelpers": true,
+    "baseUrl": "./",
+    "paths": {
+      "*": ["src/*"]
+    },
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"],

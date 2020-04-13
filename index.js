@@ -1,7 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Count from './src/page/index'
-
-const App = () => <Count initCount={2} />
+import App from './src/page/index'
 
 ReactDOM.render(<App />, document.getElementById('app'))

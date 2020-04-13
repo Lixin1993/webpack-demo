@@ -1,29 +1,15 @@
-import React, { useState } from 'react'
-import 'assets/style/index'
+import React from 'react'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import rootReducer from 'reducer/index'
+import Count from './count'
 
-interface IProps {
-  initCount: number;
-}
+const store = createStore(rootReducer)
 
-const Count = (props: IProps) => {
-  const { initCount } = props
-  const [count, setCount] = useState(initCount)
-  return (
-    <div className="count">
-      <img src={require('../assets/image/timg.jpeg')} alt="图片" />
-      <p>{count}</p>
-      <input
-        type="button"
-        value="count++"
-        onClick={() => setCount(count + 1)}
-      />
-      <input
-        type="button"
-        value="count--"
-        onClick={() => setCount(count - 1)}
-      />
-    </div>
-  )
-}
+const App = () => (
+  <Provider store={store}>
+    <Count initCount={2} />
+  </Provider>
+)
 
-export default Count
+export default App
